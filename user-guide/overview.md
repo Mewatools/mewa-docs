@@ -21,4 +21,4 @@ This documentation was made for all Mewa community, and we appreciate all the he
 
 [Using the Node Graph](node-graph.md)
 
-[Animating parameters with Curve Editor](curve-editor.md)
+[Animating parameters with the Curve Editor](curve-editor.md)
