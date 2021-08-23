@@ -12,7 +12,7 @@ This documentation was made for all Mewa community, and we appreciate all the he
 ![](https://i.imgur.com/SmzFvQC.png)
 
 
-### Contents
+## Contents
 [Getting started](getting-started.md)
 
 [Main window](main-window.md)
