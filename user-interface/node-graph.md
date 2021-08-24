@@ -1,9 +1,6 @@
 ---
-id: node-graph
-title: Using the Node Graph
-sidebar_label: Using the Node Graph
----
-
+title: node-graph.md
+tags: mewa-user-guide
 ---
 
 ## Understanding the Node-graph
