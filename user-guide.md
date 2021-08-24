@@ -31,4 +31,6 @@ This documentation was made for all Mewa community, and we appreciate all the he
 
 [ColorWheel node]()
 
-[HexPixelate](node-reference/hexpixelate.md)
+[HexPixelate](https://hackmd.io/Siu43tIkTQmIhYa42p06Yw)
+
+
