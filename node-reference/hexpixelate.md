@@ -1,10 +1,11 @@
 ---
+title: hexpixelate.md
 tags: mewa-user-guide
 ---
 
 {%hackmd theme-dark %}
 
-[User Guide Contents](../user-guide.md) | [View Script](https://www.mewatools.com/webstore/index.php?view=HexPixelate)
+[User Guide Contents]([../user-guide.md](https://hackmd.io/a1QcmKzITpWvPFlszBX4Qw)) | [View Script](https://www.mewatools.com/webstore/index.php?view=HexPixelate)
 
 ### HexPixelate
 
