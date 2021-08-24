@@ -1,10 +1,10 @@
 ---
-id: hexpixelate
-title: HexPixelate
-sidebar_label: HexPixelate
+tags: mewa-user-guide
 ---
 
-**[:arrow_up: User Guide Contents](../user-guide.md)**
+{%hackmd theme-dark %}
+
+[User Guide Contents](../user-guide.md) | [View Script](https://www.mewatools.com/webstore/index.php?view=HexPixelate)
 
 ### HexPixelate
 
@@ -17,7 +17,4 @@ HexPixelate node pixelates it's input image using an hexagonal pattern.
 
 The size of the pixel is adjustable.
 
-:::info
-:link: See more on the [WebStore](https://www.mewatools.com/webstore/index.php?view=HexPixelate)
-:::
 
