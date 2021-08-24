@@ -3,6 +3,10 @@ title: node-graph.md
 tags: mewa-user-guide
 ---
 
+{%hackmd theme-dark %}
+
+[User Guide Contents](https://hackmd.io/@k--5gSDXTFSeySUer_0emQ/BJEudBf-F)
+
 ## Understanding the Node-graph
 
 ![](https://upload.wikimedia.org/wikipedia/commons/9/93/NodeGraphScreenshot.png)

@@ -22,19 +22,10 @@ This documentation was made for all Mewa community, and we appreciate all the he
 
 
 ## Script Programming
-[Language reference]()
 
-[Function reference]()
-
-[Extending Mewa with custom shaders]()
 
 ## Nodes Reference
-[Footage node]()
 
-[Move2D node]()
-
-[ColorWheel node]()
-
-[HexPixelate](https://hackmd.io/Siu43tIkTQmIhYa42p06Yw)
+[HexPixelate](https://hackmd.io/@k--5gSDXTFSeySUer_0emQ/HJg0W_rfWY)
 
 

@@ -5,7 +5,7 @@ tags: mewa-user-guide
 
 {%hackmd theme-dark %}
 
-[User Guide Contents](https://hackmd.io/a1QcmKzITpWvPFlszBX4Qw) | [View Script](https://www.mewatools.com/webstore/index.php?view=HexPixelate)
+[User Guide Contents](https://hackmd.io/@k--5gSDXTFSeySUer_0emQ/BJEudBf-F) | [View Script](https://www.mewatools.com/webstore/index.php?view=HexPixelate)
 
 ### HexPixelate
 
