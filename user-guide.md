@@ -1,6 +1,7 @@
 ---
 title: user-guide.md
 tags: mewa-user-guide
+description: Mewa - Video Creator & Compositor
 ---
 Mewa User Guide
 ===
@@ -14,11 +15,11 @@ This documentation was made for all Mewa community, and we appreciate all the he
 
 ## User Interface
 
-[Using the Node Graph](user-interface/node-graph.md)
+[Using the Node Graph](https://hackmd.io/@k--5gSDXTFSeySUer_0emQ/SkGOcUEbY)
 
 [Animating parameters with the Curve Editor](user-interface/curve-editor.md)
 
-
+[Expressions in Parameters](expressions.md)
 
 
 ## Script Programming
