@@ -9,7 +9,9 @@ description: Mewa - Video Creator & Compositor
 
 Below is the list functions supported in Mewa scripts.
 
-If you need a function that is currently not available please [contact us](https://www.mewatools.com), we want to help you.
+Function names are shown as chapters to make the navigation easier thought the side menu.
+
+If you need a function that is not currently available please [contact us](https://www.mewatools.com), we want to help you.
 
 
 #### connectNodes( outNodeName, inNodeName, inputIndex )
@@ -23,12 +25,12 @@ connectNodes("ColorWheel", "OverlayBlend", 0);
 ```
 
 #### nodegraph()
-Returns the [Nodegraph](# Nodegraph) object.
+Returns the [Nodegraph](https://hackmd.io/akGwvXj5QHSWS4m-6K8ggg#Nodegraph) object.
 
 ### Classes
 
 #### ColorWheelNode
-Creates a new [[Mewa_User%27s_Guide/ColorWheel_Node|ColorWheel node]] and adds it to the [[Mewa_User%27s_Guide/Using_the_Node_Graph | node-graph]].
+Creates a new [ColorWheel node]() and adds it to the [nodegraph](https://hackmd.io/VIsuWHCySFWk6j2shR36zw).
 
 ##### Constructors
 * ColorWheelNode()
@@ -204,7 +206,7 @@ The link is opened in the system web browser when the user clicks [help button] 
 * ShaderNode( glslCode, nameHint )
 * ShaderNode( glslCode, name, pos )
 
-Adds *node* to the node-graph.
+Creates a ShaderNode, with the given *glslCode*, and adds it to the node-graph.
 
 *nameHint* is the name given to the node while generating a unique name for the node. 
 If there is already a node with name *nameHint* a number will be added at the end of the *nameHint* to make it unique.
@@ -212,17 +214,17 @@ If there is already a node with name *nameHint* a number will be added at the en
 If *pos* is not provided the node will be placed at a "best guess" position.
 
 The best way to learn on how to create shader nodes is to look at examples.
-Mewa web store provides many scripts with it's source available. One example is [https://mewatools.com/webstore/index.php?view=Ether Ether]
+Mewa web store provides many scripts with it's source available. One example is [Ether](https://mewatools.com/webstore/index.php?view=Ether)
 
-To fill the node's panel use the functions [[#addFloatControl]], [[#addVec2Control]] and [[#addColorControl]].
+To fill the node's panel use the functions [*addFloatControl*](https://hackmd.io/akGwvXj5QHSWS4m-6K8ggg?view#addFloatControl-variableName--defaultValue-), [*addVec2Control*](https://hackmd.io/akGwvXj5QHSWS4m-6K8ggg?view#addVec2Control) and [*addColorControl*](https://hackmd.io/akGwvXj5QHSWS4m-6K8ggg?view#addColorControl-variableName-).
 Each of those functions adds one row to the node's panel, starting from the bottom.
 
 ##### Controls
 
 Controls are graphical widgets used to change the value of input variables in the shader program. There are 3 different control types:
-* [[#addFloatControl]] connects to a input variable of type *float*
-* [[#addVec2Control]] connects to a input variable of type *vec2* 
-* [[#addColorControl]] connects to a input variable of type *vec3*
+* *addFloatControl* connects to a input variable of type *float*
+* *addVec2Control* connects to a input variable of type *vec2* 
+* *addColorControl* connects to a input variable of type *vec3*
 
 By default the controls will show the name of the variable as a text label. The label text can be modified by through the function:
 * setName( name )
@@ -230,26 +232,30 @@ By default the controls will show the name of the variable as a text label. The 
 The control name should be unique within the node as the *name* can be used in the control search.
 
 ##### addFloatControl( variableName , defaultValue )
-Adds a GUI control to the node [Mewa_User%27s_Guide/Using_the_Node_Graph | node panel] to change the value
-of a given variable in the shader program.
+Adds a GUI control to the node [parameters window](https://hackmd.io/VIsuWHCySFWk6j2shR36zw?view#Parameters-window). The GUI control changes the value
+of a variable in the shader program. The variable is of *float* data type.
 
 *variableName* is the name of variable in the shader source that will be controlled.
 
-[[File:FloatControl.png|frame|right|Float Control]]
+![](https://i.imgur.com/FRnroxw.png)*Float control*
 
-Returns a [[#FloatControl]] object.
+Returns a [FloatControl](https://hackmd.io/akGwvXj5QHSWS4m-6K8ggg?view#FloatControl) object.
 
 ##### addVec2Control( variableName, defaultValues )
 
-[[File:Vec2Control.png|frame|right|Vec2 Control]]
+![](https://i.imgur.com/bF81GSl.png)*Vec2 Control*
+
+Returns a [Vec2Control](https://hackmd.io/akGwvXj5QHSWS4m-6K8ggg?view#Vec2Control) object.
+
 
 ##### addColorControl( variableName )
-This function creates a [[#ColorControl]] connected to variable with name ''variableName'' and initialized with black color (0,0,0).
-See more at [[#ColorControl]].
+This function creates a [ColorControl](https://hackmd.io/akGwvXj5QHSWS4m-6K8ggg?view#ColorControl) connected to variable with name ''variableName'' and initialized with black color (0,0,0).
+See more at [ColorControl](https://hackmd.io/akGwvXj5QHSWS4m-6K8ggg?view#ColorControl).
 
 ##### addColorControl( variableName, gray )
 ''gray'' argument is a number.
-This function creates a [[#ColorControl]] connected to variable with name ''variableName'' and initialized with ''gray'' value set on the three channels R,G and B.
+This function creates a [ColorControl](https://hackmd.io/akGwvXj5QHSWS4m-6K8ggg?view#ColorControl) connected to variable with name ''variableName'' and initialized with ''gray'' value set on the three channels R,G and B.
+
 ##### addColorControl( variableName, red, green, blue )
 
 
@@ -259,8 +265,6 @@ The color control has 3 parameters. Clicking on the color button expands to show
 ##### setInputMapping( argIndex, mapping )
 The *argIndex* is the number of the input argument passed to *mainImage* function inside the GLSL code.
 The *mapping* should be ***iResolution***, ***"iChannel0"*** or ***"iChannel1"***. 
-
-[[Image:serRenderArea.png|center|setRenderArea options]]
 
 
 * An example of a node using **setInputMapping(0, "iResolution")** is [Ether](https://mewatools.com/webstore/index.php?view=Ether). This example uses the input coordinates passed into ''fragCoord'' in ''mainImage( out vec4 fragColor, in vec2 fragCoord )'' to generate a procedural image. Because "iResolution" option fills the entire viewport using ''fragCoord'' values that go always from 0 to 1, this option is mostly used to generate images.
@@ -278,7 +282,7 @@ Options are NoFlip, HorizontalFlip or VerticalFlip.
 
 #### ColorControl
 
-[[File:ColorControl.png|frame|right|Color Control]]
+![](https://i.imgur.com/auWlg9i.png)*Color Control*
 
 Create a color control initialized with red color. ''uColor'' is the name of the ''vec3'' uniform variable in the glsl shader code.
 
@@ -292,11 +296,11 @@ Color control has 3 parameters, one for each color channel.
 Sets the name of this control.
 *name* is shown in the control as a text label.
 
-See also [Controls section](# Controls).
+See also [Controls section](https://hackmd.io/akGwvXj5QHSWS4m-6K8ggg?view#Controls).
 
 #### FloatControl
 
-The code below, taken from [https://mewatools.com/webstore/index.php?view=Ether Ether.mw], shows how a FloatControl is used.
+The code below, taken from [Ether.mw](https://mewatools.com/webstore/index.php?view=Ether), shows how a FloatControl is used.
 The function ''addFloatControl'' creates a control, adds it to the node panel and returns the control for further setup.
 ```javascript
 parameter = node.addFloatControl("uDelta", 2.5);
@@ -323,4 +327,4 @@ The control name should be unique within the node as the ''name'' can be used in
 Sets the name of this control.
 ''name'' is shown in the control as a text label.
 
-See also [Controls](# Controls).
+See also [Controls](https://hackmd.io/akGwvXj5QHSWS4m-6K8ggg?view#Controls).
