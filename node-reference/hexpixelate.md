@@ -1,6 +1,7 @@
 ---
 title: hexpixelate.md
 tags: mewa-user-guide
+description: Mewa - Video Creator & Compositor
 ---
 
 {%hackmd theme-dark %}
