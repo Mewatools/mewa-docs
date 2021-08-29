@@ -14,9 +14,9 @@ description: Mewa - Video Creator & Compositor
 
 HexPixelate node pixelates it's input image using an hexagonal pattern.
 
-
-
-
 The size of the pixel is adjustable.
+
+
+![](https://i.imgur.com/UTRLtsZ.png)
 
 
