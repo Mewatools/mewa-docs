@@ -1,5 +1,5 @@
 ---
-title: getting-started.md
+title: first-run.md
 tags: mewa-user-guide
 description: Mewa - Video Creator & Compositor
 ---
@@ -13,4 +13,6 @@ Getting Started
 
 
 ## Understanding the Time-view
+
+
 
