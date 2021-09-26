@@ -6,9 +6,7 @@ description: Mewa - Video Creator & Compositor
 
 ## Concepts - a sketch approach
 
-Video compositing is the technique used in post-production and video games to create visual effects. It requires expensive software, and the learning curve can be very steep due to its complexity. 
-
-The purpose of this article is to explain the basics of node-graph based compositing through sketch images.
+The purpose of this article is to explain the basics of Mewa's node-graph based compositing through sketch images.
 
 ### The node-graph
  
