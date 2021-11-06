@@ -14,15 +14,16 @@ Function names are shown as chapters to make the navigation easier thought the s
 If you need a function that is not currently available please [contact us](https://www.mewatools.com), we want to help you.
 
 
-#### connectNodes( outNodeName, inNodeName, inputIndex )
-Adds a connection between output of node with name *outNodeName* and input of node with name *inNodeName*.
-*inputIndex* is the index of the input port.
+#### connect( outNodeName, outputIndex, inNodeName, inputIndex )
+Adds a top-down (output to input) connection between output of *outNodeName* and input of *inNodeName* node.
+*outputIndex* and *inputIndex* are the output port and input port indexes respectively.
 Node input ports are indexed from 0 to N, where N is the number of input ports. In other words, the first input port of a node has index 0, the second input has index 1, and so on.
 
 Example:
 ```javascript
-connectNodes("ColorWheel", "OverlayBlend", 0);
+connect("ColorWheel", 0, "OverlayBlend", 0);
 ```
+
 
 #### nodegraph()
 Returns the [Nodegraph](https://hackmd.io/akGwvXj5QHSWS4m-6K8ggg#Nodegraph) object.
@@ -262,14 +263,26 @@ This function creates a [ColorControl](https://hackmd.io/akGwvXj5QHSWS4m-6K8ggg?
 
 The color control has 3 parameters. Clicking on the color button expands to show the 3 parameters.
 
-##### setInputMapping( argIndex, mapping )
-The *argIndex* is the number of the input argument passed to *mainImage* function inside the GLSL code.
-The *mapping* should be ***iResolution***, ***"iChannel0"*** or ***"iChannel1"***. 
+##### addShaderInput( input )
+Adds an input to *mainImage* function inside the GLSL code.
+The *input* must be ***iResolution***, ***"iChannel0"*** or ***"iChannel1"***. 
 
 
-* An example of a node using **setInputMapping(0, "iResolution")** is [Ether](https://mewatools.com/webstore/index.php?view=Ether). This example uses the input coordinates passed into ''fragCoord'' in ''mainImage( out vec4 fragColor, in vec2 fragCoord )'' to generate a procedural image. Because "iResolution" option fills the entire viewport using ''fragCoord'' values that go always from 0 to 1, this option is mostly used to generate images.
-* An example of a node using **setInputMapping(0, "iChannel0")** is [HexPixelate](https://mewatools.com/webstore/index.php?view=HexPixelate). The *iChannel0* option automatically adds an input port to the node. to connect an input image. The input coordinates ''fragCoord'' passed into ''mainImage( out vec4 fragColor, in vec2 fragCoord )'' cover only the input image. Also, note that ''fragCoord'' coordinates can have any range of values within the 0 to 1 limits. Use the texture size in variable ''iChannelResolution[0]'' to get, always, a 0 to 1 range in the ''fragCoord'' input variable. The ''iChannel0'' option is aminly aimed at the creation of image processing nodes, taking an input image for processing and outputing the result. 
-* An example using **setInputMapping(0, "iChannel0")** and **setInputMapping(1, "iChannel1")** can be found in [OverlayBlend](https://mewatools.com/webstore/index.php?view=OverlayBlend). This option is mostly used to merge 2 images. It adds 2 input ports to the node. When using the ''iChannel0+iChannel1'' option make sure to be use ''mainImage( out vec4 fragColor, in vec2 fragCoordA, in vec2 fragCoordB )'' function in your shader source to access the texture coordinates of both images. Use the texture size in variable ''iChannelResolution[0]'' to get, always, a 0 to 1 range in the ''fragCoord'' input variable.
+* An example of a node using **addShaderInput("iResolution")** is [Ether](https://mewatools.com/webstore/index.php?view=Ether). This example uses the input coordinates passed into *fragCoord* in 
+```javascript
+mainImage( out vec4 fragColor, in vec2 fragCoord )
+```
+to generate a procedural image. Because "iResolution" option fills the entire viewport using ''fragCoord'' with values that go always from 0 to 1, this option is mostly used to generate images.
+* An example of a node using **addShaderInput("iChannel0")** is [HexPixelate](https://mewatools.com/webstore/index.php?view=HexPixelate). The *iChannel0* option automatically adds an input port to the node. to connect an input image. The input coordinates ''fragCoord'' passed into 
+```javascript
+mainImage( out vec4 fragColor, in vec2 fragCoord )
+```
+cover only the input image. Also, note that ''fragCoord'' coordinates can have any range of values within the 0 to 1 limits. Use the texture size in variable ''iChannelResolution[0]'' to get, always, a 0 to 1 range in the ''fragCoord'' input variable. The ''iChannel0'' option is aminly aimed at the creation of image processing nodes, taking an input image for processing and outputing the result. 
+* An example using **addShaderInput("iChannel0")** and **setInputMapping("iChannel1")** can be found in [OverlayBlend](https://mewatools.com/webstore/index.php?view=OverlayBlend). This option is mostly used to merge 2 images. It adds 2 input ports to the node. When using the ''iChannel0+iChannel1'' option make sure to be use 
+```javascript
+mainImage( out vec4 fragColor, in vec2 fragCoordA, in vec2 fragCoordB )
+```
+function in your shader source to access the texture coordinates of both images. Use the texture size in variable ''iChannelResolution[0]'' to get, always, a 0 to 1 range in the ''fragCoord'' input variable.
 
 
 ##### setFilter( channel, filter )
