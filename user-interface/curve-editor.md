@@ -154,4 +154,10 @@ The bar view displays curves as horizontal bars, which is very usefull when we o
 *Curves in time scale*
 
 
+### Audio ###
 
+Mewa currently only supports *.wav* sound files.
+
+After importing the sound waves of the imported file are shown and kept visible at the center of the curve editor.
+
+![](https://i.imgur.com/Q5cxQjm.png)*Audio wave in curve editor*
