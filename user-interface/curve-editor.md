@@ -35,7 +35,7 @@ Parameters have a curve button (![](https://upload.wikimedia.org/wikipedia/commo
 
 
 You can associate a parameter to an existing curve by clicking a curve from the curve button menu.
-To create a new curve click the ''new curve...'' option, the first option in the curve button menu. The created curve will be shown in the curve editor as a flat line, which means constant value. The name of the created curve contains the node name followed by the parameter name.
+To create a new curve click the *new curve...* option, the first option in the curve button menu. The created curve will be shown in the curve editor as a flat line, which means constant value. The name of the created curve contains the node name followed by the parameter name.
 
 
 ### The Curve Editor window ###
@@ -54,9 +54,14 @@ As a curve is modified it's changes are propagated through all the parameters as
 
 ### Navigating the Curve Editor ###
 
-#### Fit in view ####
+Changing the view scale, or zooming, is a common action when adusting curves. Higher levels of zoom are needed when adjusting curves to finer detail.
+
+#### Fit-in view ####
 The *Fit in view* button ![](https://upload.wikimedia.org/wikipedia/commons/9/9f/FitInViewButton.png) zooms the view to fit the selected points on the current view. If there are no points selected the *Fit in view* button will fit all points of the current selected curves.
 
+#### Scale axis view ####
+
+Moving the mouse while holding the shift key changes the curve editor view scale. Horizontal mouse movement, with shift key down, changes the X axis scale. Vertical mouse movement, with shift key down, changes the Y axis scale.
 
 #### Zoom and Pan ####
 You may navigate the Curve Editor space by using the Middle Mouse button to pan and the mouse wheel to zoom.
@@ -90,8 +95,8 @@ To add points,
 
 To delete points select one or more points and:
 * click ![](https://upload.wikimedia.org/wikipedia/commons/c/c3/DeletePoint.png).
-* or, press ''delete'' key,
-* or, right-click over one of the selected points to open the context menu and choose ''delete''.
+* or, press *delete* key,
+* or, right-click over one of the selected points to open the context menu and choose *delete*.
 
 #### Curve interpolation ####
 Interpolation defines the shape of a curve between points.
@@ -109,7 +114,7 @@ To change the interpolation between points, select one or more points,
 * Click one of the interpolation buttons
 * right click on a point to open the context menu and select an interpolation mode
 
-![](https://upload.wikimedia.org/wikibooks/en/4/47/PointContextMenu.png)*Point context menu*
+![](https://i.imgur.com/oyLZ5W0.png) *Point context menu*
 
 
 
