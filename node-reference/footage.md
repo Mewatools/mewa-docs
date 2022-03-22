@@ -20,7 +20,8 @@ To open the file browser click ![](https://upload.wikimedia.org/wikipedia/common
 Imported footage from the [Mewa User's Guide/Import footage#file browser]() appears in the node-graph as a new node.
 The node has the name of the imported file.
 
-![](https://www.mewatools.com/downloads/logo/mewa-128x128.png)*Footage node*
+![](https://i.imgur.com/hvs0FsM.png)
+*Footage node*
 
 
 
@@ -29,7 +30,7 @@ and the footage file name.
 
 #### Parameters
 
-![](https://www.mewatools.com/downloads/logo/mewa-128x128.png)*Footage parameters*
+![](https://i.imgur.com/sJMs36m.png)*Footage parameters*
 
 
 ##### Frame Index===
