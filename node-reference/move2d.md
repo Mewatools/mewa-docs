@@ -13,6 +13,9 @@ description: Mewa - Video Creator & Compositor
 The Move2D node is used for simple 2D transformations, such as moving and scaling. 
 The image’s aspect can also be modified using the scale parameters.
 
+![](https://i.imgur.com/sJMs36m.png)
+
+
 #### Parameters
 
 
