@@ -6,7 +6,7 @@ description: Mewa - Video Creator & Compositor
 
 ## Main Window
 
-Below is Mewa's main window when we launch it for the first time.
+Below is Mewa's main window when launched for the first time.
 
 At the top is the app bar with 3 buttons. Just below is a big empty area, that's the node-graph window, because it has no nodes it looks empty. 
 Below is node-graph window is the timeline that contains play buttons and a play bar. At the bottom end is the status bar used to show usefull tips and information.
@@ -65,7 +65,9 @@ Examples:
 While the [node graph](https://hackmd.io/@k--5gSDXTFSeySUer_0emQ/SkGOcUEbY) provides a visualization of the different operations in the workflow, this workflow changes through time.
 The time-view provides the controls to navigate through time.
 
-![](https://upload.wikimedia.org/wikipedia/commons/3/3d/MewaTimeline.png)*Time-view*
+
+![](https://i.imgur.com/YD4MBWw.png)*Time-view*
+
 
 The playbar shows a time scale and a red vertical line, pointing to the current frame number, which we call play-head.
 Both the image shown in the output window and the values shown in the node parameters window, are all respective to the selected frame, pointed by the play-head.
@@ -89,6 +91,17 @@ The player buttons are explained in the table below,
 
 The play-bar, located above the player toolbar, allows the quick navigation through frames. 
 Clicking and dragging in the play-bar changes the current frame. A red vertical line, called the play head, shows where the current frame number is in the play-bar scale.
+
+#### Animation Options
+
+At the bottom right we have the playback type, the duration of the animation and the frame-rate.
+The playback type holds 3 options:
+  1.  **One-Shot** : Animation stops at the end of the animation duration. 
+  2. **Ping-Pong** : The animation continuously plays forwards and then backwards when it reaches the endpoint.
+  3. **Loop** ![](https://i.imgur.com/91pQOp3.png): The animation continuously loops jumping from end to start.
+
+
+
 
 ### Store Window
 
