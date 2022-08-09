@@ -28,8 +28,6 @@ If Mewa is already installed on your machine, type instead:
 There are 2 ways of installing Mewa on windows:
 * Through the [Microsoft Store](https://www.microsoft.com/store/apps/9NRJM8F0MLN4)
 * Through [Mewatools.com](https://mewatools.com/releases/windows/)
-  * Note that installing Mewa from Mewatools requires installing a certificate. Download and open the file [certificate.cer](https://mewatools.com/releases/windows/MewaDist_0.22.37.0_Test/MewaDist_0.22.37.0_x64.cer). Click on "Install Certificate" to local machine (not Current User) and then choose "Place all certificates in the following store" option. Choose "Trusted Root Certification Authorities" to complete the installation.
-
 
 
 #### Troubleshooting
@@ -45,4 +43,8 @@ One way to update the OpenGL graphics driver is:
 If the above method doesn't work the drivers needs to be updated manually:
 1. Navigate to your graphics card manufacturer official website. (Intel, AMD or NVIDIA)
 2. On the official site, navigate to the graphics driver and choose your operating system. Download the latest drivers for your graphics card and install it to your computer. This will also update the OpenGL on your computer.
+
+## Web App
+
+Alternatively you can run Mewa on the web browser, without the need to install anything. Just visit [mewa.club](https://mewa.app)
 
