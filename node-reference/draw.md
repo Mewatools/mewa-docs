@@ -13,6 +13,10 @@ description: Mewa - Video Creator & Compositor
 
 With the draw tool you can create vector based drawings as well as animate them.
 
+#### Advantages of Mewa animations
+
+Animations done with web technologies like CSS and SVG use a lot of CPU. Mewa animations run entirely on GPU. In pratical terms it means that web pages running mewa animations can load faster, run smoother animations, and be more responsive. All because a lot of the work done in the webpage is offloaded from CPU to GPU.
+
 
 ![](https://i.imgur.com/Dk73byA.png)
 
@@ -44,11 +48,52 @@ If something is selected the output toolbar will also show:
 
 The draw order of the objects is as listed by the tree-view, from top to bottom.
 
+### Creating a shape
+
+![](https://i.imgur.com/Gist6YO.png)
+
+On the right side we have all the points that make the shape. Each point with its X and Y values in separate boxes.
+Each box is a parameter.
+
+To animate the geometry we se curves to the parameters we want to change over time.
+
+Everytime I change the value of a parameter with a curve set it changes the curve.
+
+
 
 
 ### Export to HTML
 
 Generates an html webpage that plays the created animation.
+
+#### Javascript API
+
+To interact with animations Mewa offers a javascript API.
+
+Public API functions start with underscore.
+
+In the example below the *setValue()* function sets a constant value to a parameter. Note that the *setValue()* function starts with an underscore.
+```
+<script type='text/javascript'>
+
+    // Parameters list
+    const Parameters = {
+        const BubbleLayer = {
+            BubbleX: 0,
+            BubbleY: 1
+        }
+    }
+
+    function onMouseClick()
+    {
+        // set value to parameter, constant through time
+        _setValue( Parameters.BubbleLayer.BubbleX , 0.5 );
+        _setValue( Parameters.BubbleLayer.BubbleY , 0.5 );
+    }
+    canv.addEventListener('click', onMouseClick, false);
+    
+</script>
+```
 
 ### Custom Effects
 
@@ -57,6 +102,7 @@ Custom shaders can be added to *Draw* animation.
 Input variables supported in Draw shaders are:
 
 * iTime
+* iResolution
 
 ### Related Resources
 
