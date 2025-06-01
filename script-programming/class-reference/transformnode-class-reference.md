@@ -5,7 +5,7 @@ description: Mewa Programming Reference
 ---
 
 
-## TransformNode class reference
+## Transform Node class reference
 
 ### Creation
 ```javascript
