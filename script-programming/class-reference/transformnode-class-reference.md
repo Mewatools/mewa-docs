@@ -10,7 +10,7 @@ description: Mewa Programming Reference
 ### 🛠️ Creation
 
 ```javascript
-const transform = nodegraph().addNode("Transform");
+transform = nodegraph().addNode("Transform");
 ```
 
 ---
@@ -18,7 +18,7 @@ const transform = nodegraph().addNode("Transform");
 ### 📍 Example: Center an Image
 
 ```javascript
-const transform = nodegraph().addNode("Transform");
+transform = nodegraph().addNode("Transform");
 transform
   .setPivot(0.5, 0.5) // center of the input image
   .moveTo(0.5, 0.5);  // center of the output frame
@@ -29,7 +29,7 @@ transform
 ### 🔄 Example: Center, Rotate, and Scale an Image
 
 ```javascript
-const transform = nodegraph().addNode("Transform");
+transform = nodegraph().addNode("Transform");
 transform
   .setPivot(0.5, 0.5)    // rotate/scale around image center
   .moveTo(0.5, 0.5)      // place image in center of output
