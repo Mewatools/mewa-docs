@@ -1,9 +1,4 @@
 ---
-title: TransformNode class reference
-
----
-
----
 title: transformnode-class-reference.md
 tags: mewa-programming-reference
 description: Mewa Programming Reference
