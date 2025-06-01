@@ -5,59 +5,73 @@ description: Mewa Programming Reference
 ---
 
 
-## Transform Node class reference
+## 📘 TransformNode — Class Reference
 
-### Creation
+### 🛠️ Creation
+
 ```javascript
-transform = nodegraph().addNode("Transform");
+const transform = nodegraph().addNode("Transform");
 ```
 
-#### Example : center image
+---
+
+### 📍 Example: Center an Image
 
 ```javascript
-transform = nodegraph().addNode("Transform");
+const transform = nodegraph().addNode("Transform");
 transform
-  .setPivot(0.5, 0.5)
-  .moveTo(0.5, 0.5)
+  .setPivot(0.5, 0.5) // center of the input image
+  .moveTo(0.5, 0.5);  // center of the output frame
 ```
 
-#### Example : center, rotate and scale image
+---
+
+### 🔄 Example: Center, Rotate, and Scale an Image
 
 ```javascript
-transform = nodegraph().addNode("Transform");
+const transform = nodegraph().addNode("Transform");
 transform
-  .setPivot(0.5, 0.5)
-  .moveTo(0.5, 0.5)
-  .setRotation(45)
-  .setScale(1.5, 1.5);
+  .setPivot(0.5, 0.5)    // rotate/scale around image center
+  .moveTo(0.5, 0.5)      // place image in center of output
+  .setRotation(45)       // rotate 45 degrees clockwise
+  .setScale(1.5, 1.5);   // scale up by 1.5x
 ```
 
+---
 
-### Methods
+### 📚 Methods
 
+| Method                  | Description                              | Units          |
+| ----------------------- | ---------------------------------------- | -------------- |
+| `moveTo(x, y)`          | Layout-style center positioning          | Normalized     |
+| `setTranslation(x, y)`  | Pixel-perfect offset from current origin | Pixels         |
+| `setPivot(x, y, unit?)` | Defines rotation/scale origin            | `norm` or `px` |
+| `setRotation(degrees)`  | Rotates the input around the pivot       | Degrees        |
+| `setScale(x, y)`        | Scales the input from the pivot point    | Multiplier     |
 
-| Method                 | Purpose                         | Units      |
-| ---------------------- | ------------------------------- | ---------- |
-| `moveTo(x, y)`         | Layout-based center positioning | normalized |
-| `setTranslation(x, y)` | Pixel-perfect offset            | pixels     |
-| `setPivot(x, y, unit)` | Defines rotation/scale origin   | norm or px |
-| `setRotation(degrees)` | Rotate around pivot             | degrees    |
-| `setScale(x, y)`       | Non-uniform scaling             | multiplier |
+---
 
+### 🔎 Coordinate Space Explanation
 
-The pivot is relative to the input image. It determines the "origin" for operations like rotation and scale — both of which are internal to the element before it's positioned.
-
-Also, the moveTo method applies the translation to the pivot.
+* The **pivot** is relative to the **input image**, not the output frame.
+* It defines the point around which **rotation** and **scaling** are applied.
+* By default, `setPivot()` uses **normalized** coordinates:
 
 ```javascript
-transform.setPivot(0.5, 0.5); // normalized to the input (the image)
+transform.setPivot(0.5, 0.5); // center of the input image
 ```
+
+* The `moveTo()` function repositions the **pivot point** in the **output frame**, using normalized coordinates.
+
+---
+
+### 📐 Coordinate Reference Table
 
 | Operation                 | Coordinates      | Relative To            |
 | ------------------------- | ---------------- | ---------------------- |
-| `setTranslation`          | Pixels           | Output frame           |
-| `moveTo`                  | Normalized (0–1) | Output frame           |
-| `setPivot`          | Normalized (0–1) | Input image        |
+| `setTranslation(x, y)`    | Pixels           | Output frame           |
+| `moveTo(x, y)`            | Normalized (0–1) | Output frame           |
+| `setPivot(x, y, unit?)`   | Normalized or px | Input image            |
 | `setRotation`, `setScale` | —                | Applied from the pivot |
 
-
+---
