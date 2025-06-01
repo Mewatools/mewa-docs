@@ -1,0 +1,52 @@
+---
+title: transformnode-class-reference.md
+tags: mewa-programming-reference
+description: Mewa Programming Reference
+---
+
+
+## TransformNode class reference
+
+##### Creation
+```javascript
+transform = nodegraph().addNode("Transform");
+```
+
+#### Example
+
+```javascript
+transform = nodegraph().addNode("Transform");
+transform
+  .moveTo(0.5, 0.5)
+  .setPivot(0.5, 0.5)
+  .setRotation(45)
+  .setScale(1.5, 1.5);
+```
+
+#### Methods
+
+
+| Method                 | Purpose                         | Units      |
+| ---------------------- | ------------------------------- | ---------- |
+| `moveTo(x, y)`         | Layout-based center positioning | normalized |
+| `setTranslation(x, y)` | Pixel-perfect offset            | pixels     |
+| `setPivot(x, y, unit)` | Defines rotation/scale origin   | norm or px |
+| `setRotation(degrees)` | Rotate around pivot             | degrees    |
+| `setScale(x, y)`       | Non-uniform scaling             | multiplier |
+| `setUniformScale(s)`   | Uniform scaling                 | multiplier |
+
+The pivot is relative to the input image. It determines the "origin" for operations like rotation and scale — both of which are internal to the element before it's positioned.
+
+```javascript
+transform.setPivot(0.5, 0.5); // normalized to the input (the image)
+```
+
+| Operation                 | Coordinates      | Relative To            |
+| ------------------------- | ---------------- | ---------------------- |
+| `setTranslation`          | Pixels           | Output frame           |
+| `moveTo`                  | Normalized (0–1) | Output frame           |
+| `setPivot(norm)`          | Normalized (0–1) | **Input frame**        |
+| `setPivot(px)`            | Pixels           | Input frame            |
+| `setRotation`, `setScale` | —                | Applied from the pivot |
+
+
